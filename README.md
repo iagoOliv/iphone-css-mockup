@@ -1,2 +1,3 @@
-# iphone-css-mockup
- iPhone 13 made in CSS and SASS
+# iPhone 13 feito em CSS+SASS
+
+## Pequeno desafio CSS sem muitas referências! :)

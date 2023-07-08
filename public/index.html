@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="author" content="Iago de Oliveira">
+    <meta propery="description" content="iPhone feito em CSS+SASS">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <title>iPhone 13 :: Prototype</title>
+</head>
+<body>
+    <div class="copyright">
+        <span class="copyright__text copyright__text--author">Made with &#10084; by Iago</span>
+        <span class="copyright__text copyright__text--date">2023</span>
+    </div>
+    <!-- 
+        Para calcular o tamanho do celular, soma-se a resolução da viewport
+        do aplicativo, cada elemendo subsequente e o tamanho desejado da 
+        determinada parte do celular, como o frame e canvas.
+    -->
+    <!--
+        Por exemplo:
+        Viewport + Canvas + Frame
+    -->
+    <!--
+        O canvas tem uma resolução (viewport) + valor desejado
+        O frame tem uma resolução (viewport) + (canvas) + valor desejado
+    -->
+    <!-- Phone outer frame -->
+    <main class="phone">
+        <!-- Phone fixed buttons start -->
+        <div class="phone__btn phone__btn--mute phone__btn--left"></div>
+        <div class="phone__btn phone__btn--volume-up phone__btn--left"></div>
+        <div class="phone__btn phone__btn--volume-down phone__btn--left"></div>
+        <div class="phone__btn phone__btn--power phone__btn--right"></div>
+        <!-- Phone fixed buttons end -->
+        <!---->
+        <!-- Phone inner canvas -->
+        <section class="phone__canvas">
+            <!-- App viewport start -->
+            <div class="phone__app-viewport">
+                <div class="phone__speaker"></div>
+                <div class="phone__notch"></div>
+                <div class="phone__system-navbar"></div>
+                <!-- <header class="app__global-header">
+                    <div class="app__header-btn">
+                        <img src="icons/chevron-left-solid.svg" class="app__header-btn--icon">
+                        <span class="app__header-btn--text">Voltar</span>
+                    </div>
+                </header>
+                <div class="app__content">
+                    <form class="form" method="post">
+                        <h1 class="form__title">Login</h1>
+                        <div class="form__input-wrapper">
+                            <span class="input-title">Email</span>
+                            <input type="text" class="input" placeholder="Insira seu Email">
+                        </div>
+                        <div class="form__input-wrapper">
+                            <span class="input-title">Senha</span>
+                            <input type="password" class="input" placeholder="Insira sua senha">
+                        </div>
+                           
+                        <div class="form__links-list">
+                            <a href="" class="form__help-link-list--item">Esqueci minha senha</a>
+                            <a href="" class="form__help-link-list--item">Criar uma conta</a>
+                        </div>
+                        <button class="form__btn btn--big">Entrar</button>
+                    </form>
+                </div>  -->
+            </div>
+            <!-- App viewport end -->
+        </section>
+    </main>
+    
+    <script src="script/main.js"></script>
+</body>
+</html>

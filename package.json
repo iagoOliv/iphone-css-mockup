@@ -1,0 +1,19 @@
+{
+  "name": "iphone.scss",
+  "version": "1.0.0",
+  "description": "iPhone 13 recreation in SCSS",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass sass/main.scss public/css/main.css -w"
+  },
+  "keywords": [
+    "iphone",
+    "css",
+    "design"
+  ],
+  "author": "Iago de Oliveira",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

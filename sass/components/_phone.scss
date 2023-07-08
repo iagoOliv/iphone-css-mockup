@@ -1,0 +1,139 @@
+// Phone Component
+
+.phone{
+    position: relative;
+    margin-top: 6.4rem;
+    height: calc(84.4rem + 2.4rem + 1.2rem); /* Viewport + Canvas + Frame*/
+    width: calc(39.3rem + 2.4rem + 1.2rem);  /* Viewport + Canvas + Frame*/
+    z-index: 10;
+    background-color: var(--phone-color-main);
+    border: var(--phone-outter-border);
+    border-radius: var(--phone-outter-border-radius);
+    box-shadow: 0 .8rem 2.4rem 0 rgba(0, 0 , 0, 0.5);
+    flex-shrink: 0;
+
+    // Efeito de iluminação
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: 90;
+    //     border-radius: var(--phone-outter-border-radius);
+    //     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0) 40%);
+    // }
+
+    // Botões exteriores do Celular
+    &__btn {
+        position: absolute;
+        width: var(--phone-btn-width);
+        background: var(--phone-color-button);
+        border: .1rem solid var(--phone-color-button-border);
+    
+        &--left {
+            border-radius: .6rem 0 0 .6rem;
+        }
+
+        &--right {
+            border-radius: 0 .6rem .6rem 0;
+        }
+
+        &--power {
+            top: 30%;
+            right: calc(var(--phone-btn-width-negative) + -.3rem);
+            height: 12rem;
+        }
+
+        &--mute {
+            top: 20%;
+            left: calc(var(--phone-btn-width-negative) + -.3rem);
+            height: 4rem;
+        }
+
+        &--volume-up {
+            top: 30%;
+            left: calc(var(--phone-btn-width-negative) + -.3rem);
+            height: 8rem;
+        }
+
+        &--volume-down {
+            top: 41%;
+            left: calc(var(--phone-btn-width-negative) + -.3rem);
+            height: 8rem;
+        }
+    
+    }
+
+    &__canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: calc(84.4rem + 2.4rem);
+        width: calc(39.3rem + 2.4rem);
+        border-radius: var(--phone-inner-border-radius);
+        z-index: 1;
+        background: var(--phone-color-canvas);
+    }
+
+    &__app-viewport {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);   
+        border-radius: var(--phone-inner-border-radius);     
+        width: 39.3rem;
+        height: 84.4rem;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5.6rem;
+            background: url(../img/wallpaper.jpg);
+            background-size: cover;
+        }
+    }
+
+    &__speaker {
+        position: absolute;
+        width: 2rem;
+        top: .8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var();
+    }
+
+    &__notch {
+        position: absolute;
+        height: 3.5rem;
+        width: 18.0rem;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        z-index: 1;
+        background: var(--phone-color-canvas);
+        border-radius: 0 0 2.2rem 2.2rem;
+    }
+
+    &__system-navbar {
+        position: absolute;
+        height: .6rem;
+        width: 20rem;
+        left: 50%;
+        bottom: 2.4rem;
+        transform: translateX(-50%);
+
+
+        border-radius: 10rem;
+        background: white;
+    }
+}

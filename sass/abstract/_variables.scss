@@ -1,0 +1,29 @@
+:root {
+    --wp--color-foreground: hsl(223, 47%, 6%);
+    --wp--color-text-main: #94A3B8;
+    --wp--color-text-sub: #475569;
+
+
+    --phone-color-main: rgb(65, 65, 65);
+    --phone-color-canvas: rgb(5, 5, 5);
+    --phone-color-speaker: rgb(25, 25, 25);
+    --phone-color-button: #6b6b6b;
+    --phone-color-button-border: rgb(158, 158, 158);
+
+    --phone-outter-border-radius: 7rem;
+    --phone-inner-border-radius: 6.4rem;
+    --phone-outter-border: .3rem rgb(129, 129, 129) solid;
+    --phone-inner-border: 1.5rem solid black;
+    
+    --phone-btn-width: .6rem;
+    // Propriedade para fazer o botão ficar pra fora do celular
+    --phone-btn-width-negative: -.6rem;
+
+
+    --app--color-dark-500: #17181A;
+    --app--color-dark-400: #1E1F21;
+    --app--color-dark-300: #27292B;
+    --app--color-main: #1D4ED8;
+    --app--color-sub: #6F8EFF;
+    --app--property-btn-radius: .6rem;
+}

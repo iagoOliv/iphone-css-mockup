@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap");
+:root {
+  --wp--color-foreground: hsl(223, 47%, 6%);
+  --wp--color-text-main: #94A3B8;
+  --wp--color-text-sub: #475569;
+  --phone-color-main: rgb(65, 65, 65);
+  --phone-color-canvas: rgb(5, 5, 5);
+  --phone-color-speaker: rgb(25, 25, 25);
+  --phone-color-button: #6b6b6b;
+  --phone-color-button-border: rgb(158, 158, 158);
+  --phone-outter-border-radius: 7rem;
+  --phone-inner-border-radius: 6.4rem;
+  --phone-outter-border: .3rem rgb(129, 129, 129) solid;
+  --phone-inner-border: 1.5rem solid black;
+  --phone-btn-width: .6rem;
+  --phone-btn-width-negative: -.6rem;
+  --app--color-dark-500: #17181A;
+  --app--color-dark-400: #1E1F21;
+  --app--color-dark-300: #27292B;
+  --app--color-main: #1D4ED8;
+  --app--color-sub: #6F8EFF;
+  --app--property-btn-radius: .6rem; }
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /*  10px  */ }
+
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--wp--color-foreground);
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Belanosima', sans-serif; }
+
+.phone__app-viewport::before {
+  filter: brightness(1.1); }
+
+.copyright {
+  position: absolute;
+  top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2px; }
+  .copyright__text--author {
+    color: var(--wp--color-text-main);
+    font-weight: 500; }
+  .copyright__text--date {
+    color: var(--wp--color-text-sub); }
+
+.phone {
+  position: relative;
+  margin-top: 6.4rem;
+  height: calc(84.4rem + 2.4rem + 1.2rem);
+  /* Viewport + Canvas + Frame*/
+  width: calc(39.3rem + 2.4rem + 1.2rem);
+  /* Viewport + Canvas + Frame*/
+  z-index: 10;
+  background-color: var(--phone-color-main);
+  border: var(--phone-outter-border);
+  border-radius: var(--phone-outter-border-radius);
+  box-shadow: 0 0.8rem 2.4rem 0 rgba(0, 0, 0, 0.5);
+  flex-shrink: 0; }
+  .phone__btn {
+    position: absolute;
+    width: var(--phone-btn-width);
+    background: var(--phone-color-button);
+    border: 0.1rem solid var(--phone-color-button-border); }
+    .phone__btn--left {
+      border-radius: .6rem 0 0 .6rem; }
+    .phone__btn--right {
+      border-radius: 0 .6rem .6rem 0; }
+    .phone__btn--power {
+      top: 30%;
+      right: calc(var(--phone-btn-width-negative) + -.3rem);
+      height: 12rem; }
+    .phone__btn--mute {
+      top: 20%;
+      left: calc(var(--phone-btn-width-negative) + -.3rem);
+      height: 4rem; }
+    .phone__btn--volume-up {
+      top: 30%;
+      left: calc(var(--phone-btn-width-negative) + -.3rem);
+      height: 8rem; }
+    .phone__btn--volume-down {
+      top: 41%;
+      left: calc(var(--phone-btn-width-negative) + -.3rem);
+      height: 8rem; }
+  .phone__canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(84.4rem + 2.4rem);
+    width: calc(39.3rem + 2.4rem);
+    border-radius: var(--phone-inner-border-radius);
+    z-index: 1;
+    background: var(--phone-color-canvas); }
+  .phone__app-viewport {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--phone-inner-border-radius);
+    width: 39.3rem;
+    height: 84.4rem;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0); }
+    .phone__app-viewport::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5.6rem;
+      background: url(../img/wallpaper.jpg);
+      background-size: cover; }
+  .phone__speaker {
+    position: absolute;
+    width: 2rem;
+    top: .8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(); }
+  .phone__notch {
+    position: absolute;
+    height: 3.5rem;
+    width: 18.0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background: var(--phone-color-canvas);
+    border-radius: 0 0 2.2rem 2.2rem; }
+  .phone__system-navbar {
+    position: absolute;
+    height: .6rem;
+    width: 20rem;
+    left: 50%;
+    bottom: 2.4rem;
+    transform: translateX(-50%);
+    border-radius: 10rem;
+    background: white; }
+
+/**/
+/**/
+@media screen and (max-width: 500px) {
+  html {
+    font-size: calc(50%); } }
