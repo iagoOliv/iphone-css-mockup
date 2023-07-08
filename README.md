@@ -1,3 +1,5 @@
-# iPhone 13 feito em CSS+SASS
+<h1>iPhone 13 made in  CSS+SASS</h1>
 
-## Pequeno desafio CSS sem muitas referências! :)
+<h3>Small challenge without much reference :)</h3>
+
+<img src="cover.png"></img>
